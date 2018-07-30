@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>McCabe Tonna Coding Awesomeness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    window.addEventListener("keydown", checkKeyPressed, false);
+    var uStyle = document.createElement('style');
+    uStyle.type = 'text/css';
+    uStyle.innerHTML =
+      '.uImage{transform:scaleX(-1); animation:float-by 8s ease-in-out; position:fixed;top:300px;z-index:10000}@keyframes float-by{from{left:-50%}to{left:125%}}';
+    document.head.appendChild(uStyle);
+
+    function checkKeyPressed(e) {
+      if (e.keyCode == "85") {
+        console.log("Easter Egg Found!!");
+
+        var arr = ['af', 'cs', 'dg', 'bm', 'cc', 'dl', 'ib', 'jl', 'km', 'kr', 'cc', 'ib', 'mk', 'mt', 'mu', 'ni', 'rs', 'tj', 'zf']
+        var i = arr[Math.floor(Math.random() * arr.length)];
+        var unicorn = document.createElement('img');
+        unicorn.className = 'uImage';
+        unicorn.src = 'https://ssl.gstatic.com/chat/babble/ee/' + i + '.gif';
+        unicorn.alt = 'unicorn' + i;
+        console.log(unicorn.alt, i);
+        document.body.appendChild(unicorn);
+
+
+        setTimeout(function() {
+          document.body.removeChild(unicorn);
+        }, 8000); //match the '8s' in the innerHTML
+      }
+
+
+    }
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>McCabe Tonna Projects</h2>
+    <hr>
+    <button type="button" class="btn btn-primary btn-link" data-toggle="collapse" data-target="#javascript">Javascript Projects
+  </button>
+    <div id="javascript" class="collapse">
+      <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#coding1">Full-stack Custom Login and Registration
+</button>
+      <div id="coding1" class="collapse">
+        <ul class="list-group list-group-flush">
+          <div class="justify-content-center"> <a href="https://github.com/mastermccabe/angular_registration_form" class="btn btn-lg btn-link" role="button">Github Link</a>
+          </div>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Custom signup page with form control for plug and play on future sites
+        </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Registration page utilizing Angular to make sure sign-up forms are all valid
+        </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Prevents exploitation of database vulnerabilities, like SQL Injection, privilege escalation and brute-force attacks
+        </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Allows for login and password, utilized Bootstrap, also allows for encryption
+        </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">MongoDB backend, NodeJS with express
+        </a>
+        </ul>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#coding2">Full-stack Survey
+</button>
+      <div id="coding2" class="collapse">
+        <ul class="list-group list-group-flush">
+          <div class="justify-content-center"> <a href="https://github.com/mastermccabe/Survey_JS_Angular" class="btn btn-lg btn-link" role="button">Github Link</a>
+          </div>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Custom survey form for plug and play on future sites
+      </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">MVC architecture allowing for a survey and poll to be created
+      </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Ability to combine with registration form for future use
+
+      </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">MongoDB backend, NodeJS with express
+
+      </a>
+
+        </ul>
+      </div>
+    </div>
+
+    <!-- end of javascript buttons -->
+    <hr>
+    <button type="button" class="btn btn-primary btn-link" data-toggle="collapse" data-target="#python">Python Projects
+</button>
+    <div id="python" class="collapse">
+      <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#coding3">Full-stack Registration/ Sign In Book Review form
+
+  </button>
+      <div id="coding3" class="collapse">
+        <ul class="list-group list-group-flush">
+          <div class="justify-content-center"> <a href="https://github.com/mastermccabe/BookReviewer_Python_FullStack" class="btn btn-lg btn-link" role="button">Github Link</a>
+          </div>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Allowed for users to sign up, and add book reviews
+        </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Registration page with login and encrypted password       </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Django rest framework
+          </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">mySQL backend</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Other users can see and add reviews of their own (one to many relationship)
+        </a>
+        </ul>
+      </div>
+      <!-- end coding3 -->
+      <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#coding4"> Restful Users (CRUD)
+
+      </button>
+      <div id="coding4" class="collapse">
+        <ul class="list-group list-group-flush">
+          <div class="justify-content-center"> <a href="https://github.com/mastermccabe/Restful" class="btn btn-lg btn-link" role="button">Github Link</a>
+          </div>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Create, Read, Update and Destroy users from a table (CRUD)
+        </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Displays common user records in database
+      </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">
+            <ul class="list-group list-group-flush"> Table includes, ID (auto increment), Full Name, Email, Created At, and corresponding actions:
+              <li class="list-group-item list-group-item-action list-group-item-info"> Show Users </li>
+              <li class="list-group-item list-group-item-action list-group-item-info"> Edit User </li>
+              <li class="list-group-item list-group-item-action list-group-item-info">Delete User</li>
+
+            </ul>
+          </a>
+        </ul>
+
+
+
+      </div>
+
+    </div>
+    <!-- end python buttons -->
+    <hr>
+    <button type="button" class="btn btn-primary btn-link" data-toggle="collapse" data-target="#swift">Swift (iOS) Project
+    </button>
+    <div id="swift" class="collapse">
+      <ul class="list-group list-group-flush">
+        <div class="justify-content-center"> <a href="https://github.com/mastermccabe/mapkit" class="btn btn-lg btn-link" role="button">Github Link</a>
+        </div>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-success">(Hackathon Winning Project)
+      </a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Problem: "Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city and returns to the origin city?"
+    </a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Allows for entering up to 25 locations (pins) to visit, this app will reorder to provide shortest and most efficient order of locations to visit.
+          </a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Will open up GoogleMaps with most efficient route, ready to navigate
+            </a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">
+          <ul class="list-group list-group-flush"> Pods used:
+            <li class="list-group-item list-group-item-action list-group-item-info"> GoogleMaps API </li>
+            <li class="list-group-item list-group-item-action list-group-item-info"> GooglePlacePicker </li>
+            <li class="list-group-item list-group-item-action list-group-item-info">Alamofire</li>
+            <li class="list-group-item list-group-item-action list-group-item-info"> SwitflyJSON</li>
+            <li class="list-group-item list-group-item-action list-group-item-info"> SnapKit</li>
+          </ul>
+        </a>
+
+      </ul>
+    </div>
+    <!-- end swift -->
+
+    <hr>
+    <button type="button" class="btn btn-primary btn-link" data-toggle="collapse" data-target="#ui">UI - unicorn DOM
+    </button>
+    <div id="ui" class="collapse">
+      <ul class="list-group list-group-flush">
+        <div class="justify-content-center"> <a href="https://github.com/mastermccabe/UnicornDOM" class="btn btn-lg btn-link" role="button">Github Link</a>
+        </div>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Small project where if you paste the text into a browser’s console, it will allow for each time the “u” key is pressed, a random unicorn from an array of unicorns would run across the screen from left to right.
+    </a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Demonstrates ability to control the DOM using only CSS and HTML
+          </a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Don't believe me? ... try it! (Type or hold the letter: u)
+            </a>
+
+      </ul>
+    </div>
+
+
+  </div>
+
+
+
+
+</body>
+
+</html>
