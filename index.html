@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    $(function() {
+      $('img').on('click', function() {
+        $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+        $('#enlargeImageModal').modal('show');
+      });
+    });
+  </script>
   <script>
     window.addEventListener("keydown", checkKeyPressed, false);
     var uStyle = document.createElement('style');
@@ -93,6 +104,43 @@
     <button type="button" class="btn btn-primary btn-link" data-toggle="collapse" data-target="#python">Python Projects
 </button>
     <div id="python" class="collapse">
+      <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#pythonScraper">Python Web-Scraper Quizzer
+
+  </button>
+      <div id="pythonScraper" class="collapse">
+        <ul class="list-group list-group-flush">
+          <div class="justify-content-center"> <a href="https://github.com/mastermccabe/HAMTestAPI" class="btn btn-lg btn-link" role="button">Github Link</a>
+          </div>
+          <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" class="enlargeImageModalSource" style="width: 100%;">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="img-thumbnail">
+            <img src="https://i.imgur.com/b6y5Ku0.png" class="col-sm-6" alt="responsive image1">
+            <img src="https://i.imgur.com/wcfv7WS.png" class="col-sm-6" alt="responsive image2">
+          </div>
+
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Scrapes HAM Radio website into user-friendly Q&A with High Score and sections
+        </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Flask with Jinja2 front-end</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Utilizes BeautifulSoup web-scraper, bootstrap
+          </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Session for temp storage</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Skip to any section for specific quizzes
+        </a>
+        </ul>
+      </div>
+
+
       <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#coding3">Full-stack Registration/ Sign In Book Review form
 
   </button>
